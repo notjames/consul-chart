@@ -8,7 +8,7 @@ def registry_user         = "samsung_cnct";
 def chart_name            = "consul";
 def robot_secret          = "quay-robot-consul-chart-rw"
 def helm_registry_image   = "quay.io/samsung_cnct/helm-registry-agent";
-def helm_registry_version = "v0.1.7";
+def helm_registry_version = "v0.7.4-helm_2.6";
 
 podTemplate(label: 'chart-builder',
             containers: [ containerTemplate(name: 'jnlp',
