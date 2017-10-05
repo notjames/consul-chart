@@ -1,11 +1,14 @@
-name: zabra
+---
+name: chart
 version: ${CHART_VER}-${CHART_REL}
-description: Sample chart template for registry
+description: Consul chart for helm registry
 keywords:
 - kraken
-home: https://github.com/samsung-cnct/chart-zabra
+- cyklops
+- vault
+home: https://github.com/samsung-cnct/consul-chart
 sources:
-- https://github.com/samsung-cnct/chart-zabra
+- https://github.com/samsung-cnct/consul-chart
 maintainers:
 - name: Samsung CNCT
   email: samsung.cloudnative@gmail.com

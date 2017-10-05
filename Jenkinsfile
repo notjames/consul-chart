@@ -5,17 +5,17 @@ def github_org         = "samsung-cnct";
 def publish_branch        = "master";
 def registry              = "quay.io";
 def registry_user         = "samsung_cnct";
-def chart_name            = "zabra";
-def robot_secret          = "quay-robot-zabra-rw"
+def chart_name            = "consul";
+def robot_secret          = "quay-robot-consul-chart-rw"
 def helm_registry_image   = "quay.io/samsung_cnct/helm-registry-agent";
-def helm_registry_version = "v0.1.5";
+def helm_registry_version = "v0.1.7";
 
 podTemplate(label: 'chart-builder',
             containers: [ containerTemplate(name: 'jnlp',
                                             image: 'quay.io/samsung_cnct/custom-jnlp:0.1',
                                             args: '${computer.jnlpmac} ${computer.name}'),
                           containerTemplate(name: 'helm-registry-agent',
-                                            image: 'quay.io/samsung_cnct/helm-registry-agent:v0.1.5',
+                                            image: ${helm_registry_image} + ':' + ${helm_registry_version},
                                             ttyEnabled: true,
                                             command: 'cat',
                                             alwaysPullImage: true,
