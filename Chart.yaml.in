@@ -1,5 +1,5 @@
 ---
-name: chart
+name: consul
 version: ${CHART_VER}-${CHART_REL}
 description: Consul chart for helm registry
 keywords:
