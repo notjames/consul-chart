@@ -4,6 +4,8 @@
 # name: value
 
 ## Consul service ports
+Image: "quay.io/samsung-cnct/consul-container"
+ImageTag: "latest"
 HttpPort: 8500
 RpcPort: 8400
 SerflanPort: 8301
